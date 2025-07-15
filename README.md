@@ -1,40 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# E-Commerce Assignment (Whatbytes)
+
+A fully responsive e-commerce frontend built with Next.js and Tailwind CSS. This project demonstrates a product listing, filtering, cart management, and product detail pages, closely matching the provided UI reference.
+
+---
+
+## 🚀 Live Demo
+[View deployed app on Vercel](https://e-commerce-assignment-tawny.vercel.app/)
+
+## 📦 GitHub Repository
+[https://github.com/Saikrishnach4/e-commerce-assignment.git](https://github.com/Saikrishnach4/e-commerce-assignment.git)
+
+---
+
+## Features
+- **Home Page**: Product listing with filters (category, price, brand), responsive grid, and search
+- **Product Detail Page**: Large image, details, quantity selector, add to cart, and reviews section
+- **Cart Page**: List of added products, quantity update, remove, and price summary
+- **Filtering**: Category, price, brand, and search (with URL-based filters)
+- **Cart State**: Managed with Redux, persisted in localStorage
+- **Dynamic Routing**: Product detail pages (`/product/[id]`)
+- **Conditional Rendering**: No products found, empty cart, etc.
+- **Responsive Design**: 3/2/1 column grid for desktop/tablet/mobile
+- **UI**: Matches the provided reference image with attention to detail
+- **Icons**: Uses lucide-react for icons
+
+---
+
+## Tech Stack
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [lucide-react](https://lucide.dev/)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Saikrishnach4/e-commerce-assignment.git
+   cd e-commerce-assignment/my-app
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+4. **Open [http://localhost:3000](http://localhost:3000) to view the app.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Assignment Requirements Checklist
+- [x] Home page with product listing, filters, responsive grid, and search
+- [x] Product detail page with all required info and reviews section
+- [x] Cart page with all cart management features
+- [x] Filtering logic for categories, price, and search
+- [x] URL-based filters (query string)
+- [x] Redux for cart state, persisted in localStorage
+- [x] Dynamic routing for product detail pages
+- [x] Conditional rendering for empty states
+- [x] Tailwind CSS and lucide-react for styling and icons
+- [x] UI matches the provided reference image
+- [x] Feature-based, logical commits
+- [x] Deployed to Vercel ([see live](https://e-commerce-assignment-tawny.vercel.app/))
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Screenshots
+> Add screenshots here if desired
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## License
+This project is for educational/demo purposes.
