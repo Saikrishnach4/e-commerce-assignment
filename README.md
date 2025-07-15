@@ -5,7 +5,7 @@ A fully responsive e-commerce frontend built with Next.js and Tailwind CSS. This
 ---
 
 ## 🚀 Live Demo
-[View deployed app on Vercel](https://e-commerce-assignment-tawny.vercel.app/)
+[https://e-commerce-assignment-tawny.vercel.app/](https://e-commerce-assignment-tawny.vercel.app/)
 
 ## 📦 GitHub Repository
 [https://github.com/Saikrishnach4/e-commerce-assignment.git](https://github.com/Saikrishnach4/e-commerce-assignment.git)
