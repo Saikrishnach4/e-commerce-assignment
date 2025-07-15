@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { ShoppingCart, User } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { useRouter } from 'next/router';
 
 export default function Header({ search, setSearch }) {
@@ -25,18 +25,16 @@ export default function Header({ search, setSearch }) {
         </div>
       </div>
 
-      {/* Cart and Avatar */}
+      {/* Cart (icon + text + badge) */}
       <div className="flex-1 flex justify-end items-center gap-6">
-        <div className="relative cursor-pointer" onClick={() => router.push('/cart')}>
+        <div className="relative flex items-center cursor-pointer" onClick={() => router.push('/cart')}>
           <ShoppingCart className="w-7 h-7" />
+          <span className="ml-2 font-semibold">Cart</span>
           {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full px-2 py-0.5 font-bold">
+            <span className="absolute -top-2 -right-4 bg-blue-500 text-white text-xs rounded-full px-2 py-0.5 font-bold">
               {cartCount}
             </span>
           )}
-        </div>
-        <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center">
-          <User className="text-blue-900 w-5 h-5" />
         </div>
       </div>
     </header>

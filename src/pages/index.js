@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Sidebar from '@/components/Sidebar';
 import ProductGrid from '@/components/ProductGrid';
 import productsData from '@/data/products';
-import Header from '@/components/Header';
+// import Header from '@/components/Header'; // Remove this line
 
 export default function Home() {
   // Filtering state
@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="bg-[#f5f8fd] min-h-screen flex flex-col items-stretch">
-      <Header search={search} setSearch={setSearch} />
+      {/* <Header search={search} setSearch={setSearch} /> */}
       <main className="flex flex-1 gap-8 px-6 py-8 max-w-7xl mx-auto w-full">
         {/* Sidebar */}
         <div className="hidden md:block w-64 flex-shrink-0">
