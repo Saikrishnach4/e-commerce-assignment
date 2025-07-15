@@ -1,8 +1,10 @@
 import { useSelector } from 'react-redux';
 import { ShoppingCart, User } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const cartCount = useSelector(state => state.cart.items.reduce((sum, item) => sum + item.quantity, 0));
+  const router = useRouter();
 
   return (
     <header className="bg-blue-900 text-white px-6 py-4 flex items-center justify-between">
@@ -23,7 +25,7 @@ export default function Header() {
 
       {/* Cart and Avatar */}
       <div className="flex-1 flex justify-end items-center gap-6">
-        <div className="relative">
+        <div className="relative cursor-pointer" onClick={() => router.push('/cart')}>
           <ShoppingCart className="w-7 h-7" />
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full px-2 py-0.5 font-bold">
