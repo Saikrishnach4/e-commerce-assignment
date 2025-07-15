@@ -26,9 +26,15 @@ export default function Footer() {
         <div>
           <div className="font-bold mb-2">Follow Us</div>
           <div className="flex gap-4 mt-2">
-            <a href="#" aria-label="Facebook" className="hover:text-blue-400"><Facebook size={24} /></a>
-            <a href="#" aria-label="Twitter" className="hover:text-blue-400"><Twitter size={24} /></a>
-            <a href="#" aria-label="Instagram" className="hover:text-blue-400"><Instagram size={24} /></a>
+            <a href="#" aria-label="Facebook" className="bg-blue-800 rounded-full w-10 h-10 flex items-center justify-center">
+              <Facebook size={24} className="text-white" />
+            </a>
+            <a href="#" aria-label="Twitter" className="bg-blue-800 rounded-full w-10 h-10 flex items-center justify-center">
+              <Twitter size={24} className="text-white" />
+            </a>
+            <a href="#" aria-label="Instagram" className="bg-blue-800 rounded-full w-10 h-10 flex items-center justify-center">
+              <Instagram size={24} className="text-white" />
+            </a>
           </div>
         </div>
       </div>
