@@ -73,10 +73,6 @@ A fully responsive e-commerce frontend built with Next.js and Tailwind CSS. This
 
 ---
 
-## Screenshots
-> Add screenshots here if desired
-
----
 
 ## License
 This project is for educational/demo purposes.
