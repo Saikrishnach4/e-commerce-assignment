@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { updateQuantity, removeFromCart, clearCart } from '@/redux/cartSlice';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Cart() {
   const cartItems = useSelector(state => state.cart.items);
@@ -14,7 +15,6 @@ export default function Cart() {
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   if (!mounted) {
-    // Render nothing until mounted to avoid hydration error
     return null;
   }
 
@@ -41,7 +41,7 @@ export default function Cart() {
                   {cartItems.map(item => (
                     <tr key={item.id} className="border-b last:border-0">
                       <td className="py-2 flex items-center gap-4">
-                        <img src={item.image} alt={item.title} className="w-12 h-12 object-contain bg-gray-100 rounded" />
+                        <Image src={item.image} alt={item.title} width={48} height={48} className="w-12 h-12 object-contain bg-gray-100 rounded" unoptimized />
                         <span>{item.title}</span>
                       </td>
                       <td className="py-2 font-semibold">${item.price}</td>

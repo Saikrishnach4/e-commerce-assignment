@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#002b60] text-white py-8 px-6 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
-        {/* Filters */}
+      
         <div>
           <div className="font-bold mb-2">Filters</div>
           <ul className="text-sm space-y-1">
@@ -14,7 +14,7 @@ export default function Footer() {
             <li>Home</li>
           </ul>
         </div>
-        {/* About Us */}
+   
         <div>
           <div className="font-bold mb-2">About Us</div>
           <ul className="text-sm space-y-1">
@@ -22,7 +22,7 @@ export default function Footer() {
             <li>Contact</li>
           </ul>
         </div>
-        {/* Follow Us */}
+      
         <div>
           <div className="font-bold mb-2">Follow Us</div>
           <div className="flex gap-4 mt-2">

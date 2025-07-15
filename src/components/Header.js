@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, User } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -33,7 +33,7 @@ export default function Header({ search, setSearch }) {
       </div>
 
       {/* Cart (icon + text + badge) */}
-      <div className="flex-1 flex justify-end items-center">
+      <div className="flex-1 flex justify-end items-center gap-4">
         <button
           className="relative flex items-center bg-[#002a5a] hover:bg-blue-700 rounded-lg px-5 py-2 font-semibold focus:outline-none"
           onClick={() => router.push('/cart')}
@@ -46,6 +46,9 @@ export default function Header({ search, setSearch }) {
             </span>
           )}
         </button>
+        <div className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
+          <User className="text-[#0758a7] w-5 h-5" />
+        </div>
       </div>
     </header>
   );

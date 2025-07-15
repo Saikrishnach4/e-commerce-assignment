@@ -3,6 +3,12 @@ import products from '@/data/products';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addToCart } from '@/redux/cartSlice';
+import Image from 'next/image';
+
+const mockReviews = [
+  { name: 'Alice', rating: 5, text: 'Great product, highly recommend!' },
+  { name: 'Bob', rating: 4, text: 'Works well, but could be cheaper.' },
+];
 
 export default function ProductDetail() {
   const router = useRouter();
@@ -18,17 +24,14 @@ export default function ProductDetail() {
   return (
     <div className="bg-[#f5f8fd] min-h-screen flex flex-col items-stretch">
       <main className="flex flex-col md:flex-row gap-12 px-6 py-12 max-w-5xl mx-auto w-full">
-        {/* Image section */}
         <div className="flex-1 flex items-center justify-center">
-          <img src={product.image} alt={product.title} className="w-64 h-64 object-contain rounded-xl bg-white shadow" />
+          <Image src={product.image} alt={product.title} width={256} height={256} className="w-64 h-64 object-contain rounded-xl bg-white shadow" unoptimized />
         </div>
-        {/* Details section */}
         <div className="flex-1 flex flex-col justify-center">
           <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
           <div className="text-2xl font-bold text-blue-900 mb-2">${product.price}</div>
           <div className="mb-2 text-gray-600">{product.description}</div>
           <div className="mb-2 text-sm text-gray-500">Category: {product.category}</div>
-          {/* Quantity selector */}
           <div className="flex items-center gap-2 mb-4">
             <span className="font-semibold">Quantity:</span>
             <input
@@ -45,6 +48,20 @@ export default function ProductDetail() {
           >
             Add to Cart
           </button>
+          <div className="mt-8">
+            <h2 className="text-lg font-bold mb-2">Reviews</h2>
+            <div className="space-y-4">
+              {mockReviews.map((review, idx) => (
+                <div key={idx} className="bg-white rounded p-4 shadow">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="font-semibold">{review.name}</span>
+                    <span className="text-yellow-400">{'★'.repeat(review.rating)}</span>
+                  </div>
+                  <div className="text-gray-700 text-sm">{review.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </main>
     </div>
