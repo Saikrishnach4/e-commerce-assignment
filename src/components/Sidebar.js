@@ -24,7 +24,7 @@ export default function Sidebar({ selectedCategory, setSelectedCategory, priceRa
   return (
     <div className="flex flex-col gap-4">
       {/* Main blue filter box */}
-      <aside className="bg-blue-900 text-white rounded-xl p-4 w-full max-w-xs">
+      <aside className="bg-[#0068c2] text-white rounded-xl p-4 w-full max-w-xs">
         <h2 className="font-bold text-lg mb-4">Filters</h2>
         <div className="mb-6">
           <div className="font-semibold mb-2">Category</div>

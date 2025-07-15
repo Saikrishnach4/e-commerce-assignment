@@ -48,7 +48,7 @@ export default function ProductCard({ product }) {
         </div>
       )}
       <button
-        className="bg-blue-600 hover:bg-blue-700 text-white rounded-md px-4 py-1 font-semibold mt-auto"
+        className="bg-[#0068c2] hover:bg-blue-700 text-white rounded-md px-4 py-1 font-semibold mt-auto"
         onClick={() => dispatch(addToCart({ ...product, quantity: 1 }))}
       >
         Add to Cart

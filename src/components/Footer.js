@@ -2,7 +2,7 @@ import { Facebook, Twitter, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-white py-8 px-6 mt-auto">
+    <footer className="bg-[#002b60] text-white py-8 px-6 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         {/* Filters */}
         <div>

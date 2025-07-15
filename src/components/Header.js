@@ -13,7 +13,7 @@ export default function Header({ search, setSearch }) {
   }, []);
 
   return (
-    <header className="bg-blue-900 text-white px-6 py-4 flex items-center justify-between">
+    <header className="bg-[#0758a7] text-white px-6 py-4 flex items-center justify-between">
       {/* Logo */}
       <div className="font-bold text-xl flex-1">Logo</div>
 
