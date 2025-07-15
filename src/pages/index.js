@@ -4,12 +4,11 @@ import ProductGrid from '@/components/ProductGrid';
 import productsData from '@/data/products';
 // import Header from '@/components/Header'; // Remove this line
 
-export default function Home() {
+export default function Home({ search, setSearch }) {
   // Filtering state
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState(1000);
   const [selectedBrand, setSelectedBrand] = useState('All');
-  const [search, setSearch] = useState('');
 
   // Find max price for slider
   const maxPrice = Math.max(...productsData.map(p => p.price), 1000);

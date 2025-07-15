@@ -1,11 +1,22 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { updateQuantity, removeFromCart, clearCart } from '@/redux/cartSlice';
+import { useEffect, useState } from 'react';
 
 export default function Cart() {
   const cartItems = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  if (!mounted) {
+    // Render nothing until mounted to avoid hydration error
+    return null;
+  }
 
   return (
     <div className="bg-[#f5f8fd] min-h-screen flex flex-col items-stretch">
